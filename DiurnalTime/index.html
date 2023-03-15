@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昼夜长短</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="https://wzyskq.github.io/css/d0.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/toast.css"> -->
+
+    <link rel="icon" type="image/svg" href="https://wzyskq.github.io/img/svg/icon.svg">
+</head>
+
+<body>
+    <canvas></canvas>
+    <div class="container">
+        <div class="content">
+            <div class="input">
+                <div class="left">
+                    <div class="in">经度
+                        <input type="text" name="" id="longi" oninput="main();" onporpertychange="main();" placeholder="120°E"><!-- readonly="readonly" -->
+                        <i class="bi bi-x-circle" onclick="clongi(), main()"></i>
+                    </div>
+                    <div class="in">纬度
+                        <input type="text" name="" id="lati" oninput="main();" onporpertychange="main();">
+                        <i class="bi bi-x-circle" onclick="clati(), main()"></i>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="in">赤纬
+                        <input type="text" name="" id="re" oninput="cdate(), main();" onporpertychange="cdate(),main();" placeholder="">
+                        <i class="bi bi-x-circle" onclick="cre(), main()"></i>
+                    </div>
+                    <div class="in">日期
+                        <input type="text" name="" id="date" oninput="cre(), main();" onporpertychange="cre(),main();" placeholder="">
+                        <i class="bi bi-x-circle" onclick="cdate(), main()"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="output">
+                <div class="left">
+                    <div class="out">昼长<span id="daytime">- - : - -</span></div>
+                    <div class="out">夜长<span id="nighttime">- - : - -</span></div>
+                </div>
+                <div class="right">
+                    <div class="out">日出<span id="sunrise">- - : - -</span></div>
+                    <div class="out">日落<span id="sunset">- - : - -</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="earth">
+            <img src="https://wzyskq.github.io/img/svg/earth_white.svg" alt="Earth">
+            <div class="axis"></div>
+            <div class="ecliptic"></div>
+            <div class="mylati1"></div>
+            <div class="mylati2"></div>
+        </div>
+        <!-- <div class="info">
+            <h2>文档</h2>
+            <p>计算公式：半昼弧公式 (cost=-tanδ·tanφ)</p>
+        </div> -->
+    </div>
+    
+    
+
+
+</body>
+
+</html>
+
+<script src="main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="bg.js"></script>
+<script>
+    var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+    (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+    })(document, 'script');
+</script>
