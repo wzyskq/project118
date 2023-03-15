@@ -65,7 +65,7 @@ canvas{
     /* position: absolute; */
     z-index: 1;
     overflow: hidden;
-    margin: 100px;
+    /* margin: 100px; */
 }
 .content:hover + .earth{z-index: 1;}
 
