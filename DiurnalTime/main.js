@@ -1,8 +1,4 @@
-// var longi, lati, re, date, daytime, nighttime, sunrise, sunset
-// const longi = document.getElementById("longi");
-// const lati = document.getElementById("lati");
-// const re = document.getElementById("re");
-// const date = document.getElementById("date");
+window.reminder('点击地球以查看文档', 5000)
 var r = document.querySelector(':root')
 
 var day = document.getElementById("daytime");
@@ -21,10 +17,10 @@ function cre() {
     re.value = "";  //  console.log("nore")
     document.getElementById('date').setAttribute("placeholder",'')
 }
-function reminder(text) {
+function reminder(text,time) {
     Toastify({
         text: `${text}`,
-        duration: 3000,
+        duration: time,
         newWindow: true,
         close: true,
     }).showToast();
@@ -300,4 +296,20 @@ function main() {
     r.style.setProperty('--ecliptic-rotate',`${theta}deg`);
     r.style.setProperty('--mylati1-rotate',`${lati}deg`);
     r.style.setProperty('--mylati2-rotate',`${-lati}deg`);
+}
+
+var can = document.getElementById('can');
+var info = document.getElementById('info');
+
+info.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+can.onclick = function () {
+    window.scrollTo({
+        top: 10000,
+        behavior: "smooth"
+    });
 }

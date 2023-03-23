@@ -12,8 +12,6 @@
 }
 
 body{
-    /* flex-direction: column; */
-    /* position: absolute; */
     background-color: black;
     overflow-x: hidden;
 }
@@ -41,6 +39,16 @@ canvas{
     z-index: 1;
 }
 
+a{
+    color: rgb(153, 199, 255);
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+a:hover{
+    outline: 1px dashed white;
+    border-radius: 5px;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -49,10 +57,7 @@ canvas{
 
     height: 100vh;
     width: 100vw;
-    /* padding: 100px 0; */
-    /* padding: 15px; */
-
-    /* position: absolute; */
+    padding: 50px 0;
 }
 
 .content{
@@ -61,11 +66,8 @@ canvas{
     flex-direction: column;
     border-radius: 30px;
 
-    /* background-color: rgba(255, 255, 255, 0.2); */
-    /* position: absolute; */
     z-index: 1;
     overflow: hidden;
-    /* margin: 100px; */
 }
 .content:hover + .earth{z-index: 1;}
 
@@ -74,10 +76,8 @@ canvas{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* z-index: 1; */
+
     flex-wrap: wrap;
-    /* position: absolute; */
-    /* background-color: rgb(65, 213, 213); */
 }
 
 .bi-x-circle{font-size: 70%;}
@@ -102,10 +102,7 @@ canvas{
     border-radius: 25px;
     border: 1px rgba(210, 210, 210, 0.2) solid;
     background-color: rgba(240, 248, 255, 0.1);
-    /* z-index: 1; */
-    /* box-shadow: 2px 2px 5px 0 gray; */
     backdrop-filter: blur(5px);
-    /* position: absolute; */
 }
 
 .out{
@@ -142,9 +139,13 @@ canvas{
     transition: all 1s linear;
     
     position: relative;
-    margin: 100px;
+    margin: 50px;
     /* z-index: 1;   */
-    /* overflow: hidden; */
+}
+
+img {
+    height: 100%;
+    width: 100%;
 }
 
 .axis{
@@ -216,12 +217,18 @@ canvas{
     position: relative;
 
     z-index: 1;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     padding: 20px;
+    margin-top: 200px;
+    line-height: 2em;
 }
 h2{
     color: white;
 }
 p{
     color: white;
+}
+li{
+    color: white;
+    margin-left: 2em;
 }
