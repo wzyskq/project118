@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <canvas id="can"></canvas>
+    <!-- <canvas id="can"></canvas> -->
     <div class="container">
         <div class="content">
             <div class="input">
@@ -60,14 +60,14 @@
             </div>
         </div>
         <div class="earth">
-            <img src="https://wzyskq.github.io/img/svg/earth_white.svg" alt="Earth">
+            <img src="https://wzyskq.github.io/img/svg/earth_black.svg" alt="Earth">
             <div class="axis"></div>
             <div class="ecliptic"></div>
             <div class="mylati1"></div>
             <div class="mylati2"></div>
         </div>
         <div class="info" id="info">
-            <h2>Document</h2>
+            <h2>文档</h2>
             <ul>
                 <li>时区为东八区，即北京时间</li>
                 <li>日期和赤纬二选一</li>
@@ -75,17 +75,15 @@
             </ul>
             <p><b>输入格式</b>：
             <ul>
-                <li>日期：xxxx xx xx 或 xx xx || eg. 2023 1 1 或 1 1</li>
-                <li>经纬度：xx.xx••• 或 xx xx || eg. 23.4 或 23 26 （省略符号 ⌈ ° ' ⌋）</li>
+                <li>日期：xxxx xx xx 或 xx xx [ eg. 2023 1 1 或 1 1 ]</li>
+                <li>经纬度：xx.xx••• 或 xx xx [ eg. 23.4 或 23 26 ]</li>
             </ul>
 
             </p>
             <p><b>核心计算公式</b>：<a href="https://baike.baidu.com/item/半昼弧公式/10073891" target="_blank">⌈ 半昼弧公式 ⌋</a> ( cost = - tanδ · tanφ )</p>
-            
             <p><b>PS</b>：此站仅供学习，计算所得时间可能有误差！</p>
             <p>大致日出日落时间：<a href="https://cn.bing.com/search?q=sunrise+sunset+times" target="_blank">sunrise sunset times</a></p>
-            <p>本站所用的组件：<a href="https://github.com/apvarun/toastify-js" target="_blank">toastify-js</a>，<a href="https://lab.hakim.se/rymd/" target="_blank">Rymd</a></p>
-            <p>【点击本文本框返回】</p>
+            <p>本站所用的组件：<a href="https://github.com/apvarun/toastify-js" target="_blank">toastify-js</a></p>
 
         </div>
     </div>
@@ -95,15 +93,3 @@
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="web/main.js"></script>
-
-<script src="web/bg.js"></script>
-<script>
-    var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
-    (function (d, t) {
-        var g = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        g.async = true;
-        g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g, s);
-    })(document, 'script');
-</script>

@@ -1,5 +1,5 @@
-window.reminder('点击地球以查看文档', 5000)
-var r = document.querySelector(':root')
+window.reminder('下滑以查看文档', 5000);
+var r = document.querySelector(':root');
 
 var day = document.getElementById("daytime");
 var night = document.getElementById("nighttime");
@@ -298,18 +298,18 @@ function main() {
     r.style.setProperty('--mylati2-rotate',`${-lati}deg`);
 }
 
-var can = document.getElementById('can');
-var info = document.getElementById('info');
+// var can = document.getElementById('can');
+// var info = document.getElementById('info');
 
-info.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-can.onclick = function () {
-    window.scrollTo({
-        top: 10000,
-        behavior: "smooth"
-    });
-}
+// info.onclick = function () {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// }
+// can.onclick = function () {
+//     window.scrollTo({
+//         top: 10000,
+//         behavior: "smooth"
+//     });
+// }
