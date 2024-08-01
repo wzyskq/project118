@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下载</title>
+    <link rel="stylesheet" type="text/css" href="basis/i.css">
+
+    <link rel="icon" type="image/svg" href="basis/p2_icon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
+</head>
+<body>
+    <div class="title">
+        <h1>
+            <abbr title="🔗关闭当前窗口" onclick="cw()">
+                <a href="https://wzyskq.github.io/">Download</a><br>
+            </abbr>
+            <span>Beta</span>
+        </h1>
+        <p>
+            /*个人编写*/<br>
+            /*暂时仅支持64位windows*/<br>
+        </p>
+    </div>
+    <div class="know">
+        <h2>使用须知</h2>
+        <br>
+        <p class="w">作者没有能力解决报毒的问题，只能承诺永无任何恶意行为
+            <br>
+            <br>
+            杀软报毒，如果信任我，请加入白名单。如果信不过，就不要使用
+            <br>
+            <br>
+            初次使用时若弹出保护提示，则先点击"更多信息",再点击"仍要运行"
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <div class="part1 bg1"></div>
+            <div class="part2">
+                <p class="words"><b>模拟报错系统</b></p>
+                <a href="S220627.zip" class="href0">
+                    <p class="linking">
+                        <i class="bi bi-link-45deg">下载链接</i>
+                    </p>
+                </a>        
+                <p class="words">你还在因为网课要开摄像头而烦恼吗？赶紧来试试这款软件，给你提供一个不开视频的充分理由！</p>
+                <br>
+                <p class="words"><b>说明：</b>点击软件，等待2~4s，在弹出的窗口中输入你想要的文字，点击“OK”后会依次弹出两个页面，这时候您就可以截图了🥂</p>
+                <p class="words"><b>注意：</b>软件仅供娱乐，请勿运用到真实场景中！弹窗按钮皆无实质性作用。</p>
+            </div>
+            <div class="part3">
+                <pre>
+# python源码
+
+import pyautogui as gui
+
+w = gui.password(text='请输入想要的文字:\n\n默认为:摄像头温度过高，无法开启', title='模拟报错系统2.0', mask='')
+if w == '':
+    w = '摄像头温度过高，无法开启'
+gui.alert(text=f'{w}', title='警告', button='OK')
+gui.confirm(text=f'{w}', title='警告', buttons=['OK', 'Cancel']
+                </pre>
+            </div>
+        </div>
+        <!-- <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div> -->
+    </div>
+
+    <script>
+        document.oncontextmenu = function(){
+            return false;
+        }
+    </script>
+    <script type="text/javascript" src="https://wzyskq.github.io/javascript/close.js"></script>
+</body>
+</html>
