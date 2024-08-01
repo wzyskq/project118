@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updating...</title>
+
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="guide">
+        <div class="part1">
+            <i class="bi bi-exclamation-circle"></i>
+            <p>您的电脑配置较低，是否需要升级？</p>
+        </div>
+        <div class="part2">
+            <div class="box" onclick="fullScreen()">是的，麻烦了</div>
+            <div class="box" onclick="fullScreen()">不用，谢谢</div>
+        </div>
+        <table class="part3">
+            <tr>
+                <th colspan="2">本网站纯属娱乐！！！</th>
+            </tr>
+            <tr>
+                <td colspan="2">"结束升级"方法:</td>
+            </tr>
+            <tr>
+                <td>桌面端</td>
+                <td>按F11退出全屏</td>
+            </tr>
+            <tr>
+                <td>移动端</td>
+                <td>直接退出即可</td>
+            </tr>
+            <tr>
+                <td colspan="2">注: 卡顿属于正常现象</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="body">
+        <div class="quan">
+            <div class="point"><span></span></div>
+            <div class="point"><span></span></div>
+            <div class="point"><span></span></div>
+            <div class="point"><span></span></div>
+            <div class="point"><span></span></div>
+            <div class="point"><span></span></div>
+        </div>
+        <p>正在配置更新</p>
+        <p>已完成 <span id="loud">0%</span></p>
+        <p>请勿关闭计算机</p>
+    </div>
+
+
+    <script>
+        document.oncontextmenu = function () {
+            return false;
+        }
+
+        function sleep(time) {
+            let Endtime = Date.now() + time
+            while (true) {
+                if (Date.now() > Endtime) {
+                    return
+                }
+            }
+        }
+
+        function fullScreen() {
+            // documentElement 属性以一个元素对象返回一个文档的文档元素
+            var el = document.documentElement;
+            el.requestFullscreen || el.mozRequestFullScreen || el.webkitRequestFullscreen || el.msRequestFullScreen ?
+                el.requestFullscreen() || el.mozRequestFullScreen() || el.webkitRequestFullscreen() || el.msRequestFullscreen() : null;
+            window.sleep(500);
+            window.start();
+        }
+
+        function start() {
+            let guideflex = document.getElementById('guide');
+            guideflex.style.cssText = 'display: none;';
+            let bodyflex = document.getElementById('body');
+            bodyflex.style.cssText = 'display: flex;';
+            window.sleep(1000);
+            window.update();
+        }
+
+        function update() {
+            window.sleep(1000);
+            function randomInteger(min, max) {
+                // 现在范围是从  (min-0.5) 到 (max+0.5)
+                let rand = min - 0.5 + Math.random() * (max - min + 1);
+                return Math.round(rand);
+            }
+
+            let wordnum = 0;
+
+            let up = setInterval(function bs() {
+                let wordele = document.getElementById('loud');
+                console.log('-----')
+                console.log('进度', wordnum, '%')
+                wordnum++;
+                wordele.innerHTML = wordnum + '%';
+
+                let randtime = randomInteger(1, 5);
+                console.log('等时', randtime, 's');
+                sleep(randtime * 1000);
+                // sleep(1000);
+
+                if (wordnum == '100') {
+                    clearInterval(up)
+                    console.log('Finish updating...')
+                    window.sleep(1000);
+                    window.end();
+                }
+            })
+        }
+
+        function end() {
+            let bodyflex = document.getElementById('body');
+            bodyflex.style.cssText = 'display: none;';
+            let guideflex = document.getElementById('guide');
+            guideflex.style.cssText = 'display: flex;';
+        }
+    </script>
+</body>
+
+</html>

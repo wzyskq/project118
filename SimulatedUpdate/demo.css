@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+#guide{
+    height: 100vh;
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.part1 i{
+    font-size: 50px;
+    color: red;
+    margin: 20px
+}
+.part1 p{color: red;}
+
+.part2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    margin: 20px;
+    padding: 10px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px gainsboro,
+    2px 2px 5px gainsboro inset;
+    transition: 0.3s linear;
+}
+.box:hover{
+    box-shadow: -2px -2px 10px gainsboro,
+    2px 2px 10px gainsboro inset;
+}
+
+th,td{
+    padding: 5px;
+}
+
+/*  */
+
+#body{
+    height: 100vh;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(25, 18, 66);
+}
+
+p{
+    /* display: none; */
+    color: aliceblue;
+    font-size: 1.5em;
+}
+
+.quan{
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+    /* background-color: rgb(255, 0, 0); */
+    border-radius: 50%;
+    position: relative;
+}
+
+.point{
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+    position: absolute;
+    /* background-color: aliceblue; */
+}
+
+.point span{
+    height: 7px;
+    width: 7px;
+    background-color: aliceblue;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+}
+
+.point:nth-child(1){animation: p1 4s linear infinite;}
+.point:nth-child(1) span{animation: s1 4s ease infinite;}
+
+.point:nth-child(2){animation: p2 4s linear infinite;}
+.point:nth-child(2) span{animation: s2 4s ease infinite;}
+
+.point:nth-child(3){animation: p3 4s linear infinite;}
+.point:nth-child(3) span{animation: s3 4s ease infinite;}
+
+.point:nth-child(4){animation: p4 4s linear infinite;}
+.point:nth-child(4) span{animation: s4 4s ease infinite;}
+
+.point:nth-child(5){animation: p5 4s linear infinite;}
+.point:nth-child(5) span{animation: s5 4s ease infinite;}
+
+.point:nth-child(6){animation: p6 4s linear infinite;}
+.point:nth-child(6) span{animation: s6 4s ease infinite;}
+
+@keyframes p1 {
+    70%{transform: rotate(360deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes s1 {
+    69%{opacity: 1;}
+    70%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+@keyframes p2 {
+    5%{transform: rotate(0);}
+    75%{transform: rotate(360deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes s2 {
+    74%{opacity: 1;}
+    75%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+@keyframes p3 {
+    10%{transform: rotate(0);}
+    80%{transform: rotate(360deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes s3 {
+    79%{opacity: 1;}
+    80%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+@keyframes p4 {
+    15%{transform: rotate(0);}
+    85%{transform: rotate(360deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes s4 {
+    84%{opacity: 1;}
+    85%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+@keyframes p5 {
+    20%{transform: rotate(0);}
+    90%{transform: rotate(360deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes s5 {
+    89%{opacity: 1;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+@keyframes p6 {
+    25%{transform: rotate(0);}
+    95%{transform: rotate(360deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes s6 {
+    94%{opacity: 1;}
+    95%{opacity: 0;}
+    100%{opacity: 0;}
+}
