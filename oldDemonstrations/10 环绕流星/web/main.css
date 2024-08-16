@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+}
+
+.star {
+  --s: 1px;
+  height: calc(var(--r) * var(--s));
+  width: calc(var(--r) * var(--s));
+  border-radius: 50%;
+  position: absolute;
+  display: grid;
+  -webkit-mask: radial-gradient(50% 50%, rgba(0, 0, 0, 0) calc(99% - 2 * var(--s)), #000 calc(100% - 2 * var(--s)));
+}
+.star:nth-child(1) {
+  --r: 300;
+  transform: rotate(0deg);
+  animation: spin 15s linear infinite;
+}
+.star:nth-child(2) {
+  --r: 400;
+  transform: rotate(30deg);
+  animation: spin 20s linear infinite;
+}
+.star::before {
+  content: "";
+  background: conic-gradient(from 25deg, rgba(255, 255, 255, 0.6666666667) 25%, rgba(255, 255, 0, 0) 0 50%, rgba(255, 255, 255, 0.6666666667) 0 75%, rgba(255, 255, 0, 0) 0);
+  -webkit-mask: repeating-conic-gradient(rgba(0, 0, 0, 0) 0 50deg, #000 25% 25%), radial-gradient(var(--s) at var(--s) 50%, #000 97%, rgba(0, 0, 0, 0)) left/calc(100% - 2 * var(--s)) 100% repeat-x, radial-gradient(var(--s) at 50% var(--s), #000 97%, rgba(0, 0, 0, 0)) top/100% calc(100% - 2 * var(--s)) repeat-y;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}/*# sourceMappingURL=main.css.map */

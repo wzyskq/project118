@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+audio{
+    position: fixed;
+    z-index: 50;
+    right: -255px;
+    top: 50%;
+    -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+audio:hover {
+    transform: translateX(-255px);
+}
+.body{
+    background-image: url(https://pic.lienav.com/i/2022/05/15/62805ca20b7d8.png);
+    /* https://m1.im5i.com/2022/07/24/UCoJAx.png */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+h2{
+    color: aliceblue;
+    font-size: 2em;
+}
+p {color: aliceblue;}
+.header{
+    min-height: 100vh;
+}
+.head{
+    padding: 30% 0 10% 8%;
+}
+table td{
+    padding: 10px;
+}
+h1.tit{
+    font-size: 3.5em; 
+    color: aliceblue; 
+}
+p.fushuhang{
+    text-align: center;
+    font-size: 1.15em;
+    color: aliceblue;
+}
+.zs{
+    color: rgb(193, 193, 193);
+}
+.bg{
+    text-align: center;
+    background: linear-gradient(200deg,#b1f4cf,#9890e3);
+    background-attachment: fixed;
+    box-shadow: 0 0 50px white;
+}
+
+.about{
+    padding: 100px 0 100px;
+    line-height: 2em;
+}
+/* .abouttext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+.abouttext a{
+    color: rgba(128, 128, 128, 0.75);
+    border-bottom: 1px solid;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.abouttext a:hover{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.aboutme, .aboutthis{
+    margin: 20px;
+}
+
+.sth{
+    min-height: 70vh;
+    margin: 5% 10% 10%;
+}
+.history{
+    height: 100%;
+    padding: 10vh;
+}
+p.xiangqing{
+    padding-right: 0;
+    margin: auto;
+    width: 170px;
+    text-align:left;
+    -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+p.xiangqing:hover{
+    transform: translate(-3px, -3px);
+}
+.ending{
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.endtable{
+    margin: 20px;
+}
+table caption{
+    padding: 10px;
+    font-size: 1.5em;
+}
+table td{
+    padding:5px;
+    color:aliceblue;
+}
+table th{
+    padding:5px;
+    color:aliceblue;
+}
+.borderr{
+    /* border-bottom: 3px solid aliceblue; */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 5px 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+.borderr:hover{
+    box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.43);
+}

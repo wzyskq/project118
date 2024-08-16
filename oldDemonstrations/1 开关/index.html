@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开关样例</title>
+
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <div class="borderr" id="bg">
+        <input type="checkbox" id="on-off"/>
+        <label for="on-off" class="lab" id="lab" onclick="c()"></label>
+    </div>
+
+    <script>
+        var a = null;
+        var b = document.getElementById('bg')
+        // var d = document.getElementById('on-off')
+        var e = document.getElementById('lab')
+
+        function c() {
+            a++;
+            if (a % 2 == 1) {
+                // alert('dark')
+                b.style.cssText='background-color: gray;';
+            } else {
+                // alert('day')
+                b.style.cssText='background-color: white;';
+            }
+        }
+
+        function keyboard(event) {
+            let keycode = event.keyCode;
+            if (keycode == 32) {
+                // d.click()
+                // window.c()
+                e.click()
+            }
+        }
+        //参数1：表示事件，keydown:键盘向下按；参数2：表示触发的事件处理函数
+        document.addEventListener("keydown", keyboard);
+    </script>
+</body>
+</html>

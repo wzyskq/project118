@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body{
+    background-color: gray;
+    height: 100vh;
+}
+
+.guides{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* background-color: rgb(62, 64, 65); */
+    animation: gogo 3s ease forwards;
+}
+
+.gboard{
+    height: 300px;
+    width: 50px;
+    background-color: aliceblue;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: 1s;
+    position: absolute;
+    top: -300px;
+}
+
+.gicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 25px;
+    position: relative;
+    top: 18px;
+    transition: .3s;
+}
+.gicon:hover{color: red;}
+.gicon:hover p{/*opacity: 1; */color: black; display: flex;}
+.gicon p{
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 70px;
+
+    /* opacity: 0; */
+    transition: .5s;
+}
+.gicon p::before{
+    content: '';
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: -4px;
+    transform: rotate(45deg);
+}
+
+
+.gmark{
+    /* display: none; */
+    transform: rotate(180deg);
+    transition: 1s;
+    position: relative;
+    top: 0;
+}
+
+.bi-geo-alt-fill{
+    font-size: 50px;
+    color: rgb(148, 205, 255);
+}
+
+.guides:hover .gboard{top: 0;}
+.guides:hover .gmark{top: 300px;}
+
+@keyframes gogo{
+    0%{
+        transform: translateY(300px);
+    } 30% {
+        transform: translateY(300px);
+    } 100% {
+        transform: translateY(0px);
+    }
+}

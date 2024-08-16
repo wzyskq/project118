@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(205, 205, 205);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#envelope{
+    height: 560px;
+    width: min(600px,80%);
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+#envelope:hover .envepaper{top: 15%; transition-delay: 0.5s;}
+#envelope:hover .envecover{
+    transform: rotateX(180deg);
+    z-index: -1;
+    transition-delay: -0.5s;
+}
+#envelope:hover .enve3ss{
+    background-color: rgb(155, 155, 155);
+    top: -5%;
+    transition-delay: -1s;
+}
+
+.enveback{
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(155, 155, 155);
+    border-radius: 20px;
+}
+
+.envepaper{
+    height: 70%;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+
+    position: absolute;
+    top: 60%; /* 15 60*/
+    left: 50%;
+    transform: translate(-50%,0%);
+    transition: all  0.5s ease;
+}
+
+/* .enve{
+    height: 60%;
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: rgba(125, 226, 244, 0.522);
+} */
+
+.enve1s{
+    height: 60%;
+    width: 70%;
+    transform: translate(-100%, 50%) rotate(25deg) scale(2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(87,146,174);
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+}
+.enve2s{
+    height: 60%;
+    width: 70%;
+    transform: translate(100%, 50%) rotate(-25deg) scale(2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(87,146,174);
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+}
+.enve4s{
+    height: 300px;
+    width: 300px;
+    border-radius: 50px;
+    transform: translate(-50%,100%) rotate(45deg) scale(1);
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    background-color: rgb(87,146,174);
+    box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.envecover{
+    /* display: none; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    z-index: 1;
+    /* background-color: rgba(125, 226, 244, 0.522); */
+    transform: rotateX(0deg);
+    transition: all 2s ease 0.5s;
+    
+}
+.enve3s{
+    height: 50%;
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    /* background-color: rgba(255, 132, 0, 0.5); */
+}
+.enve3ss{
+    height: 300px;
+    width: 300px;
+    /* background-color: rgba(0, 0, 0, 0.419); */
+    background-color: rgb(87,146,174);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(2,1) rotate(45deg);
+    transition-delay: 1s
+}
+
+@media screen and (max-width: 580px){
+    .enve1s{transform: translate(-100%, 70%) rotate(25deg) scale(2);}
+    .enve2s{transform: translate(100%, 70%) rotate(-25deg) scale(2);}
+    .enve4s{bottom: 20%;}
+    .enve3ss{top: -20%;}
+    #envelope:hover .enve3ss{background-color: rgb(155, 155, 155);top: -40%;}
+
+    #envelope{height: 400px;}
+    .enveback{height: 50%;}
+    #envelope:hover .envepaper{top: 10%;}
+    .envecover{top: 0%;}
+}
